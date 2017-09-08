@@ -1,0 +1,53 @@
+### Git notes
+
+#### 修改git远程仓库
+`git remote` 查看所有远程仓库，
+
+```md
+    $ git remote
+    origin
+```
+
+`git remote -v` 查看详细信息
+
+```md
+    $ git remote -v
+    origin  git@github.com:michaelliao/learngit.git (fetch)
+    origin  git@github.com:michaelliao/learngit.git (push)
+```
+
+1、修改命令
+
+` git remote origin set-url [url]`
+
+```
+    $ git remote origin set-url git@github.com:Rowe9372/learngit.git
+
+```
+
+2、 先删后加
+
+` git remote rm origin` 删除远程仓库
+
+```
+    $ git remote em origin
+    $ git remote add origin git@github.com:Rowe9372/learngit.git
+```
+
+#### 删除github上的文件，保留本地的文件
+
+有时候想把github上的文件删除，但是本地仓库里的文件想保留下来
+
+1、删除github文件，本地保留
+```
+    $ git rm --cached text.txt
+    $ git commit -m "delete file"
+    $ git push
+```
+
+2、删除GitHub文件夹，本地保留， `-r` 参数，删除文件夹使用
+```
+    $ git rm -r --cached directory
+    $ git commit -m "delete directory"
+    $ git push
+```

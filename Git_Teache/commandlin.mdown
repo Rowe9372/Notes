@@ -1,0 +1,32 @@
+
+### Git command line  
+
+` git init` 把这个目录变成Git可以管理的仓库
+
+` git config --global user.name "Your Name" ` 设置用户名  ` --global` 全局参数
+
+` git config --global user.email "email@example.com" ` 设置用户邮箱
+
+` git add readme.txt ` 添加文件到暂存区
+
+` git add . ` 添加所有修改和新增的文件
+ 
+` git commit -m "wrote a readme file" ` 提交暂存区文件到仓库  -m 后面是提交说明
+
+` git commit -a ` 提交所有文件到仓库
+
+` git status ` 显示仓库当前状态
+
+` git log ` 查看历史版本记录
+
+` git log --pretty=oneline ` 参数 --pretty=oneling 显示简洁历史版本号
+
+` git reset --hard HEAD^ ` 参数HEAD^ 上一个版本 HEAD^^上上一个版本
+
+` git reset --hard  df6905c ` 参数 df6905c 版本号（不必写全，前7位）
+
+` git reflog ` 记录命令历史
+
+` git diff HEAD -- README.txt ` 查看readme.txt 工作区和版本库里面最新版本的区别
+
+` git checkout -- readme.txt` 让文件回到最近一次git commit或git add时的状态。

@@ -30,3 +30,42 @@
 ` git diff HEAD -- README.txt ` 查看readme.txt 工作区和版本库里面最新版本的区别
 
 ` git checkout -- readme.txt` 让文件回到最近一次git commit或git add时的状态。
+
+` git rm readme.txt ` 从版本库中删除该文件
+
+#### github 远程库
+
+` git remote add origin https://github.com/Rowe9372/Notes.git ` 关联远程库
+
+` git push -u origin master ` 推送当前分支所有内容到远程库，
+并关联远程master分支， 后期可直接 `git push ` 推送 
+
+` git clone  https://github.com/Rowe9372/Notes.git` 从远程库克隆
+
+### 分支管理
+
+` git branch dev ` 创建dev分支
+
+` git checkout dev ` 切换到dev分支
+
+` git  checkout -b dev ` 创建分支并切换到分支dev上
+
+` git branch ` 列出所有分支 ，`*` 标记当前分支
+
+` git merge dev `  合并指定分支到当前分支
+
+` git branch -d dev `  删除指定分支
+
+` git log --graph ` 查看分支合并图
+
+` git log --graph --pretty=oneline  --abbrev-commit `  查看简洁图
+
+` git stash ` 储存当前工作（还没有提交时）
+
+` git stash list ` 查看存储的工作
+
+` git stash apply  stash@{0}: ` 恢复存储的版本 stash 内容不删
+
+` git stash drop ` 删除stash 
+
+` git stash  pop ` 恢复并删除stash

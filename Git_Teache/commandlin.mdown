@@ -54,8 +54,12 @@
 
 ` git merge dev `  合并指定分支到当前分支
 
+` git merge --no-off -m "merge is no off" dev ` 禁止使用Fast  forward 模式
+
 ` git branch -d dev `  删除指定分支
 
+` git branch -D dev ` 强行删除还没有合并的分支
+ 
 ` git log --graph ` 查看分支合并图
 
 ` git log --graph --pretty=oneline  --abbrev-commit `  查看简洁图
@@ -68,4 +72,24 @@
 
 ` git stash drop ` 删除stash 
 
-` git stash  pop ` 恢复并删除stash
+` git stash pop ` 恢复并删除stash
+
+#### 多人协作
+
+` git remote ` 查看远程库信息
+
+` git remote -v ` 显示更详细信息
+
+` git push origin master ` 把指定分支的所有本地提交到远程库
+
+` git checkout -b branch-name origin/branch-name ` 创建远程origin 分支到本地
+
+` git pull ` 同步远程库分支
+
+` git branch --set-upstream branch-name origin/branch-name ` 建立本地分支与远程分支的关联
+
+#### 标签
+
+` git tag v1.0 ` 在需要打标签的分支上打一个新标签
+
+` git tag ` 查看所有标签

@@ -42,7 +42,7 @@
 
 ` git clone  https://github.com/Rowe9372/Notes.git` 从远程库克隆
 
-### 分支管理
+#### 分支管理
 
 ` git branch dev ` 创建dev分支
 

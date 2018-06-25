@@ -1,0 +1,10 @@
+
+body {
+	color: deeppink;
+	font-size: 36px;
+}
+.banner {
+	min-width: 200px;
+	min-height: 300px;
+	background:url('../images/a7.png');
+}
